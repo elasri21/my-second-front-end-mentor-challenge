@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  height: 100%;
+  font-size: 15px;
+  perspective: 600px;
+}
+@media (min-width: 768px) {
+  body {
+    height: 100vh;
+  }
+  body .page {
+    display: flex;
+    justify-content: center;
+  }
+  body .page .container {
+    height: 80%;
+    width: 90%;
+    display: flex;
+  }
+  body .page .container .box {
+    width: 33%;
+  }
+  body .page .container .box.sedans {
+    border-radius: 5px 0 0 5px;
+  }
+  body .page .container .box.luxury {
+    border-radius: 0 5px 5px 0;
+  }
+}
+@media (max-width: 767px) {
+  body .page .container .box.sedans {
+    border-radius: 5px 5px 0 0;
+  }
+  body .page .container .box.luxury {
+    border-radius: 0 0 5px 5px;
+  }
+}
+body .page {
+  align-items: center;
+  padding: 30px 15px;
+  height: 100%;
+  background-color: white;
+}
+body .page .container {
+  transition: .5s ease-in-out;
+}
+body .page .container:hover {
+  animation: front 1s ease-in-out;
+}
+body .page .container .box {
+  padding: 40px;
+}
+body .page .container .box .icon {
+  margin-bottom: 40px;
+}
+body .page .container .box .icon h1 {
+  text-transform: uppercase;
+  color: #f2f2f2;
+  margin-bottom: 40px;
+  margin-top: 30px;
+  font-weight: 700;
+  font-family: "Big Shoulders Display";
+}
+body .page .container .box .icon p {
+  margin-bottom: 60px;
+  color: rgba(255, 255, 255, 0.75);
+  font-family: "Lexend Deca";
+}
+body .page .container .box .icon button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #f2f2f2;
+  border: 1px solid;
+  text-align: center;
+  padding: 10px 23px;
+  border-radius: 20px;
+  text-transform: capitalize;
+  transition: .5s ease-in-out;
+  font-family: "Lexend Deca";
+}
+body .page .container .box.sedans {
+  background-color: #e38826;
+}
+body .page .container .box.sedans .icon button {
+  color: #e38826;
+}
+body .page .container .box.sedans .icon button:hover {
+  background-color: #e38826;
+  color: #f2f2f2;
+  border-color: #f2f2f2;
+}
+body .page .container .box.suvs {
+  background-color: #006970;
+}
+body .page .container .box.suvs .icon button {
+  color: #006970;
+}
+body .page .container .box.suvs .icon button:hover {
+  background-color: #006970;
+  color: #f2f2f2;
+  border-color: #f2f2f2;
+}
+body .page .container .box.luxury {
+  background-color: #004241;
+}
+body .page .container .box.luxury .icon button {
+  color: #004241;
+}
+body .page .container .box.luxury .icon button:hover {
+  background-color: #004241;
+  color: #f2f2f2;
+  border-color: #f2f2f2;
+}
+body footer {
+  padding-bottom: 20px;
+}
+body footer .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+body footer .attribution a {
+  color: #3e52a3;
+  transition: .5s ease-in-out;
+}
+body footer .attribution a:hover {
+  text-decoration: underline;
+}
+
+@keyframes front {
+  50% {
+    transform: translateZ(30px);
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

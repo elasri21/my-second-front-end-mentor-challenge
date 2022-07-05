@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body {
+    @media (min-width: 768px) {
+        height: 100vh;
+        .page {
+            display: flex;
+            justify-content: center;
+            .container {
+                height: 80%;
+                width: 90%;
+                display: flex;
+                .box {
+                    width: 33%;
+                    &.sedans {
+                        border-radius: 5px 0 0 5px;
+                    }
+                    &.luxury {
+                        border-radius: 0 5px 5px 0;
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 767px) {
+        .page {
+            .container {
+                .box {
+                    &.sedans {
+                        border-radius: 5px 5px 0 0;
+                    }
+                    &.luxury {
+                        border-radius: 0 0 5px 5px;
+                    }
+                }
+            }
+        }
+
+    }
+    height: 100%;
+    font-size: 15px;
+    perspective: 600px;
+    .page {
+        align-items: center;
+        padding: 30px 15px;
+        height: 100%;
+        background-color: white;
+        .container {
+            transition: .5s ease-in-out;
+            &:hover {
+                animation: front 1s ease-in-out;
+            }
+            .box {
+                padding: 40px;
+                .icon {
+                    margin-bottom: 40px;
+                    h1 {
+                        text-transform: uppercase;
+                        color: hsl(0, 0%, 95%);
+                        margin-bottom: 40px;
+                        margin-top: 30px;
+                        font-weight: 700;
+                        font-family: "Big Shoulders Display";
+                    }
+                    p {
+                        margin-bottom: 60px;
+                        color: hsla(0, 0%, 100%, 0.75);
+                        font-family: "Lexend Deca";
+                    }
+                    button {
+                        border: none;
+                        outline: none;
+                        cursor: pointer;
+                        background-color: hsl(0, 0%, 95%);
+                        border: 1px solid;
+                        text-align: center;
+                        padding: 10px 23px;
+                        border-radius: 20px;
+                        text-transform: capitalize;
+                        transition: .5s ease-in-out;
+                        font-family: "Lexend Deca";
+                    }
+                }
+                &.sedans {
+                    background-color: hsl(31, 77%, 52%);
+                    .icon {
+                        button {
+                            color: hsl(31, 77%, 52%);
+                            &:hover {
+                                background-color: hsl(31, 77%, 52%);
+                                color: hsl(0, 0%, 95%);
+                                border-color: hsl(0, 0%, 95%);
+                            }
+                        }
+                    }
+                }
+                &.suvs {
+                    background-color: hsl(184, 100%, 22%);
+                    .icon {
+                        button {
+                            color: hsl(184, 100%, 22%);
+                            &:hover {
+                                background-color: hsl(184, 100%, 22%);
+                                color: hsl(0, 0%, 95%);
+                                border-color: hsl(0, 0%, 95%);
+                            }
+                        }
+                    }
+                }
+                &.luxury {
+                    background-color: hsl(179, 100%, 13%);
+                    .icon {
+                        button {
+                            color: hsl(179, 100%, 13%);
+                            &:hover {
+                                background-color: hsl(179, 100%, 13%);
+                                color: hsl(0, 0%, 95%);
+                                border-color: hsl(0, 0%, 95%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer {
+        padding-bottom: 20px;
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+            a {
+                color: hsl(228, 45%, 44%);
+                transition: .5s ease-in-out;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+
+@keyframes front {
+    50%{
+        transform: translateZ(30px);
+    }
+}
